@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+      
+       <div class="container  p-5">
+           <div class="form-inputs">
+               <div class="input-gp mb-3">
+                   <label>product Name</label>
+                   <input id="productName" class="form-control mb-2">
+                   <div id="nameAlert" class="alert alert-danger d-none">Please inter one number to capital and two number small. thanks</div>
+               </div>
+               <div class="input-gp mb-3">
+                    <label>product Price</label>
+                    <input  id="productPrice" class="form-control">
+                </div>
+                <div class="input-gp mb-3">
+                    <label>product Category</label>
+                    <input  id="productCategory" class="form-control">
+                </div>
+                <div class="input-gp mb-3">
+                    <label>product Description</label>
+                    <textarea  id="productDescription" class="form-control"></textarea>
+                </div>
+                <button id="submitBtn" disabled class="btn btn-primary mb-3">Add Product</button>
+           </div>
+
+           <div class="data">
+               <input id="search" class="form-control mb-3" placeholder="Search By Name"/>
+               <table class="table table-striped">
+                   <thead>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th></th>
+                        <th></th>
+                   </thead>
+                   <tbody id="tableBody">
+                      
+                   </tbody>
+               </table>
+           </div>
+       </div>
+     <script src="js/popper.min.js"></script>  
+     <script src="js/bootstrap.min.js"></script> 
+    <script src="js/main.js"></script>
+    </body>
+</html>
