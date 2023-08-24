@@ -7,6 +7,8 @@ var submitBtn=document.getElementById("submitBtn");
 var inputs=document.getElementsByClassName("form-control");
 var searchInput=document.getElementById("search");
 var nameAlert=document.getElementById("nameAlert");
+var categoryAlert=document.getElementById("categoryAlert");
+
 var products=[];
 var currentIndex=0;
 
@@ -21,10 +23,28 @@ productName.onkeyup=function(){
     return false;
   }
   else{
-    submitBtn.removeAttribute("disabled")
+    // submitBtn.removeAttribute("disabled")
     productName.classList.add("is-valid")
     productName.classList.remove("is-invalid")
     nameAlert.classList.add("d-none");
+    return true;
+  }
+}
+productCategory.onkeyup=function(){
+  var nameRejex=/^[A-Z][a-z]{3,10}$/
+  if(!nameRejex.test(productCategory.value))
+  {
+    submitBtn.disabled="true"
+    productCategory.classList.add("is-invalid");
+    productCategory.classList.remove("is-valid");
+    categoryAlert.classList.remove("d-none");
+    return false;
+  }
+  else{
+    submitBtn.removeAttribute("disabled")
+    productCategory.classList.add("is-valid")
+    productCategory.classList.remove("is-invalid")
+    categoryAlert.classList.add("d-none");
     return true;
   }
 }

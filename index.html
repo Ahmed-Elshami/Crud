@@ -6,31 +6,34 @@
     </head>
     <body>
         
-      
+      <section id="crud">
        <div class="container  p-5">
            <div class="form-inputs">
                <div class="input-gp mb-3">
-                   <label>product Name</label>
+                   <label>Product Name</label>
                    <input id="productName" class="form-control mb-2">
                    <div id="nameAlert" class="alert alert-danger d-none">Please inter one number to capital and two number small. thanks</div>
                </div>
                <div class="input-gp mb-3">
-                    <label>product Price</label>
-                    <input  id="productPrice" class="form-control">
+                    <label>Product Price</label>
+                    <input  id="productPrice" type="number" class="form-control">
                 </div>
                 <div class="input-gp mb-3">
-                    <label>product Category</label>
+                    <label>Product Category</label>
                     <input  id="productCategory" class="form-control">
+                    <div id="categoryAlert" class="alert alert-danger d-none">Please inter one number to capital and three number small. thanks</div>
+
                 </div>
                 <div class="input-gp mb-3">
-                    <label>product Description</label>
+                    <label>Product Description</label>
                     <textarea  id="productDescription" class="form-control"></textarea>
                 </div>
-                <button id="submitBtn" disabled class="btn btn-primary mb-3">Add Product</button>
+                <button id="submitBtn" disabled class="btn btn-primary  mb-3">Add Product</button>
            </div>
+           <div class="line mt-3"></div>
 
            <div class="data">
-               <input id="search" class="form-control mb-3" placeholder="Search By Name"/>
+               <input id="search" class="form-control mb-3 w-50 m-auto text-center" placeholder="Search By Name"/>
                <table class="table table-striped">
                    <thead>
                         <th></th>
@@ -47,6 +50,7 @@
                </table>
            </div>
        </div>
+    </section>
      <script src="js/popper.min.js"></script>  
      <script src="js/bootstrap.min.js"></script> 
     <script src="js/main.js"></script>
